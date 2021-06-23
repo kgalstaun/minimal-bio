@@ -1,3 +1,4 @@
-const global = {};
+const global = {
+};
 
 export default global;

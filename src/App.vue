@@ -1,15 +1,20 @@
 <template>
-  <main class="max-w-screen-lg mx-auto px-sm">
-    <div class="py-xxl container mx-auto">
-      <NavBar />
+  <main class="max-w-screen-md mx-auto px-sm">
+    <div class="pt-lg flex flex-col items-center">
+      <Header class="mb-md" />
+      <Nav class="mb-md" />
+      <Main />
     </div>
   </main>
 </template>
 
 <script>
-import NavBar from "@/components/navbar/NavBar.vue";
+import Header from "@/components/Header.vue";
+import Nav from "@/components/Nav.vue";
+import Main from "@/components/Main.vue";
+
 export default {
-  components: { NavBar },
+  components: { Header, Nav, Main },
   setup() {},
 };
 </script>
