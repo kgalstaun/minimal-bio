@@ -1,11 +1,11 @@
 export default {
-    returnValueOrDefault(object, key, fallback) {
-        let value = fallback;
+  returnValueOrDefault(object, key, fallback) {
+    let value = fallback;
 
-        if (object && object[key]) {
-            value = object[key]
-        } 
-
-        return value;
+    if (object && object[key]) {
+      value = object[key];
     }
-}
+
+    return value;
+  },
+};

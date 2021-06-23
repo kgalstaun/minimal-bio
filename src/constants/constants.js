@@ -1,23 +1,23 @@
-import global from './global'
-import ObjectHelper from "../helpers/ObjectHelper"
+import global from "./global";
+import ObjectHelper from "../helpers/ObjectHelper";
 
 const modules = {
-    global
+  global,
 };
 
 const Constant = {
-    modules,
-    get(module, property) {
-        let value;
+  modules,
+  get(module, property) {
+    let value;
 
-        try {
-            value = ObjectHelper.find(modules[module], property)
-        } catch (error) {
-            value = '';
-        }
-
-        return value;
+    try {
+      value = ObjectHelper.find(modules[module], property);
+    } catch (error) {
+      value = "";
     }
-}
 
-export default Constant
+    return value;
+  },
+};
+
+export default Constant;
