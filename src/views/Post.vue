@@ -1,9 +1,11 @@
 <template>
   <div class="w-full">
     <template v-if="post">
-      <div v-html="post.intro.html" class="mt-md"></div>
+      <div v-if="post.intro" v-html="post.intro.html" class="mt-md"></div>
 
-      <List class="md:mt-md" :post="post" />
+      <List v-if="post.list" class="md:mt-md" :list="post.list" />
+
+      <div v-if="post.outro" v-html="post.outro.html" class="mt-md"></div>
     </template>
 
     <template v-if="error">

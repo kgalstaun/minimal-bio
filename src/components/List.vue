@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li
-      v-for="(item, index) in post.list"
+      v-for="(item, index) in list"
       :key="index"
       class="flex flex-col sm:flex-row mb-md"
     >
@@ -14,7 +14,7 @@
 <script>
 export default {
   props: {
-    post: Object,
+    list: Array,
   },
 };
 </script>
