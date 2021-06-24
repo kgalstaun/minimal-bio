@@ -3,7 +3,7 @@
     <template v-if="post">
       <div v-html="post.intro.html" class="mt-md"></div>
 
-      <List :post="post" />
+      <List class="md:mt-md" :post="post" />
     </template>
 
     <template v-if="error">
