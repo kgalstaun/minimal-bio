@@ -1,22 +1,13 @@
 <template>
-  <div id="home">
+  <div class="w-full">
     <template v-if="post">
       <div v-html="post.intro.html" class="mt-md"></div>
 
-      <ul id="array-rendering">
-        <li
-          v-for="(item, index) in post.list"
-          :key="index"
-          class="flex flex-row mb-md"
-        >
-          <span class="w-1/3 pr-md">{{ item.title }}</span>
-          <span class="w-2/3">{{ item.text }}</span>
-        </li>
-      </ul>
+      <List :post="post" />
     </template>
 
     <template v-if="error">
-      <message :type="'error'">{{ getConstant("messages", "error") }}</message>
+      <Message :type="'error'">{{ getConstant("messages", "error") }}</Message>
     </template>
   </div>
 </template>
@@ -27,9 +18,10 @@ import QueryService from "@/service/QueryService";
 import PostQuery from "@/queries/post";
 import Message from "@/components/Message";
 import ConstantService from "@/service/ConstantService";
+import List from "@/components/List";
 
 export default {
-  components: { Message },
+  components: { Message, List },
   setup() {
     onMounted(() => fetchData());
 
@@ -55,15 +47,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-#home {
-  width: 100%;
-
-  ul li {
-    span:first-child {
-      font-weight: bold;
-    }
-  }
-}
-</style>
