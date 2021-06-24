@@ -1,9 +1,9 @@
 <template>
   <main class="max-w-screen-md mx-auto px-sm">
-    <div class="pt-lg flex flex-col items-center">
+    <div class="mt-xl flex flex-col items-center">
       <Header class="mb-md" />
       <Nav class="mb-md" />
-      <Main />
+      <Main class="pt-md" />
     </div>
   </main>
 </template>

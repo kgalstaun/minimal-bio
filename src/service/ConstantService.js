@@ -1,5 +1,5 @@
-import global from "./global";
-import messages from "./messages";
+import global from "@/constants/global";
+import messages from "@/constants/messages";
 import ObjectHelper from "@/helpers/ObjectHelper";
 
 const modules = {
@@ -7,8 +7,7 @@ const modules = {
   messages,
 };
 
-const Constant = {
-  modules,
+const ConstantService = {
   get(module, property) {
     let value;
 
@@ -22,4 +21,4 @@ const Constant = {
   },
 };
 
-export default Constant;
+export default ConstantService;
