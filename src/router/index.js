@@ -12,6 +12,10 @@ const routes = [
     name: "Contact",
     component: Post,
   },
+  {
+    path: "/:pathMatch(.*)*",
+    redirect: "/",
+  },
 ];
 
 const router = createRouter({

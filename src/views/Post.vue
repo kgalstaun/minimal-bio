@@ -38,7 +38,6 @@ export default {
     });
 
     const queryParam = computed(() => {
-      console.log(route.path);
       return route.path === "/contact" ? "contact" : "home";
     });
 
