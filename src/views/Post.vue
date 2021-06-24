@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
+import { ref, watch, computed, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import QueryService from "@/service/QueryService";
 import PostQuery from "@/queries/post";
 import Message from "@/components/Message";
@@ -27,12 +28,22 @@ export default {
   setup() {
     onMounted(() => fetchData());
 
+    const route = useRoute();
     const getConstant = ConstantService.get;
     let post = ref(null);
     let error = ref(false);
 
+    watch(route, () => {
+      fetchData();
+    });
+
+    const queryParam = computed(() => {
+      console.log(route.path);
+      return route.path === "/contact" ? "contact" : "home";
+    });
+
     async function fetchData() {
-      QueryService.fetch(PostQuery, { title: "home" })
+      QueryService.fetch(PostQuery, { title: queryParam.value })
         .then((data) => {
           if (data.posts.length > 0) {
             post.value = data.posts[0];
