@@ -7,6 +7,19 @@ h2 {
     padding-bottom: 2.5rem;
 }
 
+a {
+    color: blue;
+
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: black;
+    }
+}
+
 p {
     font-size: 2rem;
     padding-bottom: 2.5rem;
