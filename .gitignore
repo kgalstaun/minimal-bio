@@ -26,4 +26,4 @@ pnpm-debug.log*
 # deployment
 firebase.json
 .firebaserc
-.firebase/*
+.firebase
