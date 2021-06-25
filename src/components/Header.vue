@@ -5,3 +5,9 @@
     >
   </header>
 </template>
+
+<style lang="scss" scoped>
+h1 {
+  line-height: 3.2rem;
+}
+</style>
