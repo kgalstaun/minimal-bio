@@ -1,8 +1,10 @@
 <template>
   <main class="w-full flex items-start">
-    <transition name="fade" mode="out-in">
-      <Router-view :key="'a' + $route.path" />
-    </transition>
+    <router-view v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" :key="'a' + $route.path" />
+      </transition>
+    </router-view>
   </main>
 </template>
 
