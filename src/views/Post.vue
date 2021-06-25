@@ -5,7 +5,7 @@
 
       <List v-if="post.list" class="md:mt-md" :list="post.list" />
 
-      <div v-if="post.outro" v-html="post.outro.html" class="mt-md"></div>
+      <div v-if="post.outro" v-html="post.outro.html" class="mt-lg"></div>
     </template>
 
     <template v-if="error">

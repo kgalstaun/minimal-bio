@@ -8,6 +8,9 @@ const PostQuery = gql`
       intro {
         html
       }
+      outro {
+        html
+      }
       list
     }
   }
