@@ -2,7 +2,7 @@
 
 A minimal biography app, with a home and a contact page. 
 
-The app is setup generically and can be easily cloned, all content (including page title) is fetched from GraphCMS.
+The app is setup generically and the site can easily be utilized different use cases, as all content is fetched from GraphCMS.
 
 ## Project setup
 
