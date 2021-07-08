@@ -1,6 +1,9 @@
 <template>
   <main class="max-w-screen-md mx-auto px-sm">
-    <div v-if="!error" class="pt-xl min-h-screen flex flex-col items-center">
+    <div
+      v-if="loaded && !error"
+      class="pt-xl min-h-screen flex flex-col items-center"
+    >
       <Header class="mb-md">{{ headerText }}</Header>
       <Nav class="mb-md" />
       <Main class="pt-md" />
@@ -24,6 +27,7 @@ export default {
     onMounted(() => fetchData());
 
     let error = ref(false);
+    let loaded = ref(false);
     let headerText = ref(null);
     let footerText = ref(null);
 
@@ -33,6 +37,7 @@ export default {
           headerText.value = data.metas[0].headerText;
           setPageTitle(headerText.value);
           footerText.value = data.metas[0].footerText;
+          loaded.value = true;
         })
         .catch(() => (error.value = true));
     }
@@ -43,6 +48,7 @@ export default {
 
     return {
       error,
+      loaded,
       headerText,
       footerText,
     };
