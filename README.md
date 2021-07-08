@@ -1,4 +1,4 @@
-# kasgalstuan.com
+# kasgalstaun.com
 
 ## Project setup
 
