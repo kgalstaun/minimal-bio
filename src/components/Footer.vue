@@ -1,3 +1,3 @@
 <template>
-  <footer>© 2021</footer>
+  <footer><slot></slot></footer>
 </template>
