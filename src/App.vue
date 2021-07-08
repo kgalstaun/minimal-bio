@@ -31,9 +31,14 @@ export default {
       QueryService.fetch(MetaQuery)
         .then((data) => {
           headerText.value = data.metas[0].headerText;
+          setPageTitle(headerText.value);
           footerText.value = data.metas[0].footerText;
         })
         .catch(() => (error.value = true));
+    }
+
+    function setPageTitle(title) {
+      document.title = title;
     }
 
     return {
