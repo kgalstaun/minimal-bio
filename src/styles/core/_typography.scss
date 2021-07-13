@@ -30,6 +30,10 @@ li {
 }
 
 @media screen and (max-width: $screen-size-sm) {
+    h1 {
+        font-size: 3.4rem;
+    }
+
     h2 {
         font-size: 2.6rem;
     }
